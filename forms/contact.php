@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password   = 'Blablaboat.972'; // ⚠️ Utilise un mot de passe d'application Gmail !
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587; // Port SMTP
-
+.
         // Paramètres de l'email
         $mail->setFrom($email, $name);
         $mail->addAddress($receiving_email_address);
