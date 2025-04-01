@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <style>
+        /* Styles pour le Header */
+        header {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 0;
+            position: fixed; 
+            top: 0; 
+        }
+
+        header #hd {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo {
+            max-width: 50px; /* Ajustez selon la taille de votre logo */
+            max-height: 50px; /* Ajustez selon la taille de votre logo */
+            margin-right: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background: #2c3e50; /* Bleu marine plus foncé */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Styles pour le Body */
+        body {
+            font-family: Arial, sans-serif;
+            background: url("baniere2.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 20px; /* Ajout de marges pour décaler le formulaire vers le bas */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333; /* Couleur de texte foncé */
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #2980b9; /* Bleu foncé */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1c87c9; /* Bleu plus clair au survol */
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div id="hd">
+            <img class="logo" src="BlaBlaBoat.png" alt="Logo">
+            <h1>Page de Connexion</h1>
+        </div>
+        <nav>
+            <a href="home.html">Accueil</a>
+            <a href="signin.html">S'Inscrire</a>
+        </nav>
+    </header>
+
+    <form method="post" action="login.php">
+        <label for="login">Nom d'utilisateur:</label>
+        <input type="text" id="login" name="login" required>
+
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Se Connecter</button>
+
+        <p class="forgot-password"><a href="reset-password.html">Mot de passe oublié ?</a></p>
+    </form>
+
+
+</body>
+</html>

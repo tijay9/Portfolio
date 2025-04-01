@@ -1,0 +1,139 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 794px;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 2.25rem;
+  margin: 47px 0 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 2.25rem;
+  margin: 34px 727px 0 113px;
+}
+
+.u-section-1 .u-text-3 {
+  font-size: 2.25rem;
+  margin: -43px 87px 0 713px;
+}
+
+.u-section-1 .u-image-1 {
+  object-position: 50% 40.51%;
+  width: 300px;
+  height: 471px;
+  margin: 10px auto 0 113px;
+}
+
+.u-section-1 .u-image-2 {
+  width: 340px;
+  height: 471px;
+  margin: -471px 87px 0 auto;
+}
+
+.u-section-1 .u-text-4 {
+  font-size: 2.25rem;
+  margin: 20px 727px 0 113px;
+}
+
+.u-section-1 .u-text-5 {
+  font-size: 2.25rem;
+  margin: -43px 87px 60px 713px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-2 {
+    margin-right: 627px;
+    margin-left: 13px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: 0;
+    margin-left: 600px;
+  }
+
+  .u-section-1 .u-image-1 {
+    inset: auto;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-right: 627px;
+    margin-left: 13px;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-right: 0;
+    margin-left: 600px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-2 {
+    margin-right: 420px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-left: 380px;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-right: 420px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-left: 380px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-text-2 {
+    margin-right: 240px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-left: 200px;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-right: 240px;
+  }
+
+  .u-section-1 .u-text-5 {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    font-size: 1.8rem;
+  }
+
+  .u-section-1 .u-text-2 {
+    font-size: 1.8rem;
+    margin-right: 40px;
+  }
+
+  .u-section-1 .u-text-3 {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-image-1 {
+    margin-left: 40px;
+  }
+
+  .u-section-1 .u-image-2 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-4 {
+    font-size: 1.8rem;
+    margin-right: 40px;
+  }
+
+  .u-section-1 .u-text-5 {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+}

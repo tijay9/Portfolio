@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <style>
+        /* Styles pour le Header */
+
+        header {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 0;
+            position: fixed; 
+            top: 0; 
+        }
+        
+        header > div {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        header .logo {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+        nav {
+            background: #2c3e50; /* Bleu marine plus foncé */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px; /* Ajoute un peu de padding autour du texte */
+            border-right: 1px solid #fff; /* Ajoute une bordure à droite de chaque lien */
+        }
+
+        nav a:last-child {
+            border-right: none; /* Assurez-vous que le dernier élément n'a pas de bordure à droite */
+        }
+
+        /* Styles pour le Body */
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url("baniere2.png");
+        	background-attachment: fixed;
+        	background-position: center;
+        	background-repeat: no-repeat;
+        	background-size: cover;
+        	display: grid;
+        	height: 100vh;
+        	place-items: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 20px; /* Ajout de marges pour décaler le formulaire vers le bas */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333; /* Couleur de texte foncé */
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #2980b9; /* Bleu foncé */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1c87c9; /* Bleu plus clair au survol */
+        }
+    </style>
+
+<script>
+    function submitForm(event) {
+    event.preventDefault(); // Empêcher le comportement par défaut du formulaire (rechargement de la page)
+
+    // Récupérer les données du formulaire
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    // Créer un objet FormData pour envoyer les données
+    var formData = new FormData();
+    formData.append('username', username);
+    formData.append('email', email);
+    formData.append('password', password);
+
+    // Effectuer une requête AJAX pour envoyer les données à traitement.php
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'traitement.php', true);
+    xhr.onload = function () {
+        // Afficher la réponse de traitement.php dans #inscription-message
+        document.getElementById("inscription-message").innerHTML = xhr.responseText;
+
+        // Réinitialiser les valeurs des champs du formulaire
+        document.getElementById("username").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+
+        // Masquer le message après 3 secondes
+        setTimeout(function () {
+            document.getElementById("inscription-message").innerHTML = "";
+        }, 3000);
+    };
+    xhr.send(formData);
+}
+
+
+</script>
+
+
+</head>
+
+<body>
+    
+    <header>
+        <div>
+            <img class="logo" src="BlaBlaBoat.png" alt="Logo">
+            <h1>Page d'inscription</h1>
+        </div>
+        <nav>
+            <a href="home.html">Acceuil</a>
+            <a href="login.html">Se Connecter</a>
+        </nav>
+    </header>
+
+    <form action="traitement.php" method="post" id="registration-form" onsubmit="submitForm(event)">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">S'inscrire</button>
+        <p id="inscription-message"></p>
+    </form>
+</body>
+
+</html>
