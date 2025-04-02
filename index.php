@@ -1,3 +1,6 @@
+<?php
+// Ici vous pouvez ajouter des fonctionnalités PHP si nécessaire
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="fr"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,9 +9,8 @@
     <meta name="description" content="">
     <title>Accueil</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="index.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="index.css" media="screen">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="generator" content="Nicepage 7.6.4, nicepage.com">
     <meta name="referrer" content="origin">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -216,32 +218,32 @@ informatique </h4>
               <div class="u-over-slide u-shading u-over-slide-1"></div>
             </div>
             <div class="u-effect-fade u-gallery-item u-shape-rectangle">
-              <div class="u-back-slide" data-image-width="900" data-image-height="900">
-                <img class="u-back-image u-expanded" src="images/fggffg.jpg">
+              <div class="u-back-slide" data-image-width="0" data-image-height="0">
+                <img class="u-back-image u-expanded" src="images/deltaTransit.jpg">
               </div>
               <div class="u-over-slide u-shading u-over-slide-2"></div>
             </div>
             <div class="u-effect-fade u-gallery-item u-shape-rectangle">
               <div class="u-back-slide" data-image-width="462" data-image-height="417">
-                <img class="u-back-image u-expanded" src="images/cxcc.jpg">
+                <img class="u-back-image u-expanded" src="images/image.png">
               </div>
               <div class="u-over-slide u-shading u-over-slide-3"></div>
             </div>
             <div class="u-effect-fade u-gallery-item u-shape-rectangle">
               <div class="u-back-slide" data-image-width="462" data-image-height="417">
-                <img class="u-back-image u-expanded" src="images/677.jpg">
+                <img class="u-back-image u-expanded" src="images/67d7.jpg">
               </div>
               <div class="u-over-slide u-shading u-over-slide-4"></div>
             </div>
             <div class="u-effect-fade u-gallery-item u-shape-rectangle">
               <div class="u-back-slide" data-image-width="462" data-image-height="417">
-                <img class="u-back-image u-expanded" src="images/vcv.jpg">
+                <img class="u-back-image u-expanded" src="images/vdcv.jpg">
               </div>
               <div class="u-over-slide u-shading u-over-slide-5"></div>
             </div>
             <div class="u-effect-fade u-gallery-item u-shape-rectangle">
               <div class="u-back-slide" data-image-width="462" data-image-height="417">
-                <img class="u-back-image u-expanded" src="images/vcvc.jpg">
+                <img class="u-back-image u-expanded" src="images/vdcvc.jpg">
               </div>
               <div class="u-over-slide u-shading u-over-slide-6"></div>
             </div>
@@ -275,66 +277,85 @@ informatique </h4>
 </g></svg></span>
           </a>
         </div>
-        <div class="u-form u-form-1">
-          <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-32 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-            <div class="u-form-email u-form-group u-form-partition-factor-2">
-              <label for="email-bb9b" class="u-label u-label-1">Email</label>
-              <input type="email" placeholder="Enter a valid email address" id="email-bb9b" name="email" class="u-border-3 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-radius-8 u-input-1" required="">
+
+        <form action="script/mail.php" method="POST" id="contactForm" class="u-clearfix u-form-spacing-32 u-form-vertical u-inner-form" name="form" style="padding: 10px;">
+          <div class="u-form-email u-form-group u-form-partition-factor-2">
+              <label for="email" class="u-label">Email</label>
+              <input type="email" placeholder="Enter a valid email address" id="email" name="email" required class="u-border-3 u-input u-radius-8">
+          </div>
+          <div class="u-form-group u-form-name u-form-partition-factor-2">
+              <label for="name" class="u-label">Name</label>
+              <input type="text" placeholder="Enter your Name" id="name" name="name" required class="u-border-3 u-input u-radius-8">
+          </div>
+          <div class="u-form-group u-form-textarea">
+              <label for="message" class="u-label">Message</label>
+              <textarea rows="4" cols="50" id="message" name="message" required class="u-border-3 u-input u-radius-8"></textarea>
+          </div>
+          <div class="u-align-left u-form-group u-form-submit">
+              <button type="submit" class="u-btn u-btn-round u-btn-submit u-button-style u-palette-2-base u-radius-8">Soumettre</button>
+          </div>
+          <div id="responseMessage" class="u-form-send-message"></div>
+      </form>
+      <div class="u-expanded-width u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+              <span class="u-file-icon u-icon u-icon-circle u-palette-2-base u-icon-6"><img src="images/646094-23388df3.png" alt=""></span>
+              <h5 class="u-text u-text-default u-text-3">Email</h5>
+              <p class="u-text u-text-4"> Contactez-moi !<br>
+                <a href="mailto:contact@domain.com" class="u-active-none u-border-1 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-2-base u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">eruam32@gmail.com</a>
+              </p>
             </div>
-            <div class="u-form-group u-form-name u-form-partition-factor-2">
-              <label for="name-bb9b" class="u-label u-label-2">Name</label>
-              <input type="text" placeholder="Enter your Name" id="name-bb9b" name="name" class="u-border-3 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-radius-8 u-input-2" required="">
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-2" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+              <span class="u-file-icon u-icon u-icon-circle u-palette-2-base u-icon-7"><img src="images/2838912-49358f0d.png" alt=""></span>
+              <h5 class="u-text u-text-default u-text-5">Adresse</h5>
+              <p class="u-text u-text-6">
+                <a href="#" class="u-active-none u-border-active-black u-border-hover-black u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-2-base u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">33 Rue JULES VÉDRINES,<br> 92240 malakoff 
+                </a>
+                <br>
+              </p>
             </div>
-            <div class="u-form-group u-form-textarea u-form-group-3">
-              <label for="textarea-a6c4" class="u-label u-label-3">Zone de texte</label>
-              <textarea rows="4" cols="50" id="textarea-a6c4" name="textarea" class="u-border-3 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-radius u-input-3" required=""></textarea>
-            </div>
-            <div class="u-align-left u-form-group u-form-submit">
-              <a href="#" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-palette-2-base u-radius-8 u-btn-1">Soumettre</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
-            </div>
-            <div class="u-form-send-message u-form-send-success">Merci ! Votre message a été envoyé.</div>
-            <div class="u-form-send-error u-form-send-message">Impossible d'envoyer votre message. Merci de corriger les erreurs et réessayer.</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-            <input type="hidden" name="formServices" value="2dc14377-06b3-414e-92ae-34625bdda5e9">
-          </form>
-        </div>
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <span class="u-file-icon u-icon u-icon-circle u-palette-2-base u-icon-6"><img src="images/646094-23388df3.png" alt=""></span>
-                <h5 class="u-text u-text-default u-text-3">Email</h5>
-                <p class="u-text u-text-4"> Contactez-moi !<br>
-                  <a href="mailto:contact@domain.com" class="u-active-none u-border-1 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-2-base u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">eruam32@gmail.com</a>
-                </p>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-2" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                <span class="u-file-icon u-icon u-icon-circle u-palette-2-base u-icon-7"><img src="images/2838912-49358f0d.png" alt=""></span>
-                <h5 class="u-text u-text-default u-text-5">Adresse</h5>
-                <p class="u-text u-text-6">
-                  <a href="#" class="u-active-none u-border-active-black u-border-hover-black u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-2-base u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">33 Rue JULES VÉDRINES,<br> 92240 malakoff 
-                  </a>
-                  <br>
-                </p>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <span class="u-file-icon u-icon u-icon-circle u-palette-2-base u-icon-8"><img src="images/8066424-eec24b29.png" alt=""></span>
-                <h5 class="u-text u-text-default u-text-7">Téléphone</h5>
-                <p class="u-text u-text-8">
-                  <a href="#" class="u-active-none u-border-1 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-2-base u-btn-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">+596 696 07 94 38<br>+
-                  </a>
-                  <span class="u-text-palette-2-base">33 605 97 25 39</span>
-                </p>
-              </div>
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+              <span class="u-file-icon u-icon u-icon-circle u-palette-2-base u-icon-8"><img src="images/8066424-eec24b29.png" alt=""></span>
+              <h5 class="u-text u-text-default u-text-7">Téléphone</h5>
+              <p class="u-text u-text-8">
+                <a href="#" class="u-active-none u-border-1 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-2-base u-btn-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">+596 696 07 94 38<br>+
+                </a>
+                <span class="u-text-palette-2-base">33 605 97 25 39</span>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+      
+      <script>
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+          event.preventDefault(); // Empêche le rechargement de la page
+      
+          let formData = new FormData(this);
+      
+          fetch("script/mail.php", {
+              method: "POST",
+              body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+              let responseDiv = document.getElementById("responseMessage");
+              responseDiv.innerHTML = data.message;
+              responseDiv.style.color = data.status === "success" ? "green" : "red";
+              if (data.status === "success") {
+                  document.getElementById("contactForm").reset();
+              }
+          })
+          .catch(error => console.error("Erreur:", error));
+      });
+      </script>
+      
+      
 
 </body></html>
